@@ -15,7 +15,6 @@
         "bundle": false,
         "main": "libs/pcm-content-proxy-api-handler/src/index.ts",
         "tsConfig": "libs/pcm-content-proxy-api-handler/tsconfig.lib.json",
-        "assets": ["apps/pcm-api/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,

@@ -2,7 +2,9 @@
   "name": "nx-monorepo",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "clean": "rimraf dist"
+  },
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -73,7 +75,6 @@
   ],
   "dependencies": {
     "@elastic/elasticsearch": "7.13.0",
-    "@nrwl/nx-darwin-arm64": "^15.9.2",
     "@tandfgroup/authorization-interceptor": "^2.2.1",
     "@tandfgroup/framework-utility-ubx-website": "^0.5.1",
     "@tandfgroup/privilege-authorization-manager": "^1.0.3",

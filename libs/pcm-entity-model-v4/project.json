@@ -10,29 +10,36 @@
   },
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
-      "post-run": {
-        "executor": "@nrwl/esbuild:esbuild",
-        "options": {
-          "cwd": "./",
-          "commands": [
-            "npm run generate:openApiComponents"
-          ],
-          "parallel": false
-        }
-      },
       "options": {
-        "outputPath":"dist/libs/pcm-entity-model-v4",
         "platform": "node",
+        "outputPath": "dist/libs/pcm-entity-model-v4",
         "format": ["cjs"],
         "bundle": false,
         "main": "libs/pcm-entity-model-v4/src/index.ts",
-        "commands": "tsc",
         "tsConfig": "libs/pcm-entity-model-v4/tsconfig.lib.json",
-        "generatePackageJson": true
-
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js",
+            ".json": ".json"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js",
+              ".json": ".json"
+            }
+          }
+        }
       }
     },
     "lint": {
