@@ -74,6 +74,5 @@
       }
     }
   },
-  "tags": [], 
-  "implicitDependencies": ["!@tandfgroup/pcm-entity-model-v4"]
+  "tags": []
 }
