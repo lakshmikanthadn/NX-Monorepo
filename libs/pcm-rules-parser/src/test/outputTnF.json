@@ -1,0 +1,54 @@
+[
+    {
+        "rules": {
+            "$or": [
+                {
+                    "$and": [
+                        {
+                            "type": {
+                                "$eq": "Book"
+                            }
+                        },
+                        {
+                            "format": {
+                                "$eq": "EBK"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": {
+                        "$eq": "Chapter"
+                    }
+                }
+            ]
+        },
+        "type": "Book"
+    },
+    {
+        "rules": {
+            "$or": [
+                {
+                    "$and": [
+                        {
+                            "type": {
+                                "$eq": "Book"
+                            }
+                        },
+                        {
+                            "format": {
+                                "$ne": "EBK"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": {
+                        "$eq": "Article"
+                    }
+                }
+            ]
+        },
+        "type": "Chapter"
+    }
+]

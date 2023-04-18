@@ -1,0 +1,19 @@
+[
+    {
+        "rules": {
+            "$and": [
+                {
+                    "type": {
+                        "$eq": "Book"
+                    }
+                },
+                {
+                    "format": {
+                        "$eq": "EBK"
+                    }
+                }
+            ]
+        },
+        "type": "Book"
+    }
+]
