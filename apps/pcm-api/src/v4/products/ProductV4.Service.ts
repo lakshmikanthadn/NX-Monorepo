@@ -1,6 +1,6 @@
 import { ResponseModel, StorageModel } from '@tandfgroup/pcm-entity-model-v4';
 import * as _ from 'lodash';
-import * as uuidV4 from 'uuid/v4';
+import uuidV4 from 'uuid/v4';
 import Logger from '../../utils/LoggerUtil';
 import { GroupedSearchQuery } from '@tandfgroup/pcm-rules-parser';
 import { getMeaningFullUrl } from '@tandfgroup/framework-utility-ubx-website';
@@ -34,7 +34,7 @@ import { SQSUtilsV4 } from '../utils/SQSUtilsV4';
 import { productV4DAO } from './ProductV4.DAO';
 import { manuscriptV4DAO } from './ManuscriptV4.DAO';
 import { S3UtilsV4 } from '../utils/S3UtilsV4';
-import { ISQSQueueUrlData } from 'v4/model/interfaces/SQSQueueUrlData';
+import { ISQSQueueUrlData } from '../../v4/model/interfaces/SQSQueueUrlData';
 
 const log = Logger.getLogger('ProductV4Service');
 const ubxWebsUrl = Config.getPropertyValue('ubxWebsUrl');

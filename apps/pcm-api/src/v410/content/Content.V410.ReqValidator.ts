@@ -1,4 +1,4 @@
-import * as Ajv from 'ajv';
+import Ajv from 'ajv';
 import { AppError } from '../../model/AppError';
 
 const ajv = new Ajv();

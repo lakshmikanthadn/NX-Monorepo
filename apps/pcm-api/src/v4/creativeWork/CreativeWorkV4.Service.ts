@@ -1,5 +1,5 @@
 import { StorageModel } from '@tandfgroup/pcm-entity-model-v4';
-import { ISQSQueueUrlData } from 'v4/model/interfaces/SQSQueueUrlData';
+import { ISQSQueueUrlData } from '../../v4/model/interfaces/SQSQueueUrlData';
 
 import { Config } from '../../config/config';
 import { AppError } from '../../model/AppError';

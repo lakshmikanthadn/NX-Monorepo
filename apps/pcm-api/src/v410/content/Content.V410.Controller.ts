@@ -3,7 +3,7 @@ import * as rTracer from 'cls-rtracer';
 import { Request, Response } from 'express';
 import isIp = require('is-ip');
 import * as jwt from 'jsonwebtoken';
-import * as jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import * as _ from 'lodash';
 
 import { AppError } from '../../model/AppError';

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import * as Ajv from 'ajv';
+import Ajv from 'ajv';
 import * as ajvErrors from 'ajv-errors';
 
 import { AppError } from '../../../model/AppError';

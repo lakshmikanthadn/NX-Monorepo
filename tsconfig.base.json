@@ -13,19 +13,17 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-monorepo/@tandfgroup/pcm-entity-model-v4": [
-        "libs/@tandfgroup/pcm-entity-model-v4/src/index.ts"
-      ],
-      "@nx-monorepo/pcm-content-proxy-api-handler": [
-        "libs/pcm-content-proxy-api-handler/src/index.ts"
-      ],
-      "@nx-monorepo/pcm-entity-model-v4": [
+      "@tandfgroup/pcm-entity-model-v4": [
         "libs/pcm-entity-model-v4/src/index.ts"
       ],
-      "@nx-monorepo/pcm-rules-parser": ["libs/pcm-rules-parser/src/index.ts"],
-      "@nx-monorepo/pcm-schema-mapper-v4": [
+      "@tandfgroup/pcm-content-proxy-api-handler": [
+        "libs/pcm-content-proxy-api-handler/src/index.ts"
+      ],
+      "@tandfgroup/pcm-rules-parser": ["libs/pcm-rules-parser/src/index.ts"],
+      "@tandfgroup/pcm-schema-mapper-v4": [
         "libs/pcm-schema-mapper-v4/src/index.ts"
       ]
     }

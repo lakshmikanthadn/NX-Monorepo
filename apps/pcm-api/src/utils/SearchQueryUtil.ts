@@ -1,6 +1,6 @@
 import { StorageModel } from '@tandfgroup/pcm-entity-model-v4';
 import { GroupedSearchQuery } from '@tandfgroup/pcm-rules-parser';
-import * as moment from 'moment';
+import moment from 'moment';
 
 import { AppError } from '../model/AppError';
 import { queryParserV4 } from './QueryParser';

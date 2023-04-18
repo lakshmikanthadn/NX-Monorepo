@@ -7,7 +7,7 @@ import { Config } from '../../config/config';
 import { AppError } from '../../model/AppError';
 import { assetV4Service } from '../assets/AssetV4.Service';
 import { schemaValidator } from '../validator/SchemaValidator';
-import { ISQSQueueUrlData } from 'v4/model/interfaces/SQSQueueUrlData';
+import { ISQSQueueUrlData } from '../../v4/model/interfaces/SQSQueueUrlData';
 
 class ACKService {
   private ackEventQueue: ISQSQueueUrlData = Config.getPropertyValue(

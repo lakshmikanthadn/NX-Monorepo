@@ -1,5 +1,5 @@
 import { ResponseModel, StorageModel } from '@tandfgroup/pcm-entity-model-v4';
-import * as jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import Logger from '../../utils/LoggerUtil';
 
 import { AppError } from '../../model/AppError';

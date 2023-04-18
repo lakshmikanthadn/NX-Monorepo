@@ -15,7 +15,7 @@ import * as Interceptor from '@tandfgroup/authorization-interceptor';
 import * as bodyParser from 'body-parser';
 import * as rTracer from 'cls-rtracer';
 import * as cors from 'cors';
-import * as express from 'express';
+import express from 'express';
 import * as path from 'path';
 import * as responseTime from 'response-time';
 

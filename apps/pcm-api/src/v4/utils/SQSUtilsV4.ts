@@ -1,11 +1,11 @@
 import * as AWS from 'aws-sdk';
-import * as uuidV4 from 'uuid/v4';
+import uuidV4 from 'uuid/v4';
 import Logger from '../../utils/LoggerUtil';
 import { ISearchReqDownload } from '../model/interfaces/SearchResult';
 
-import { IOAUpdateWrapper } from 'v4/model/interfaces/OAUpdateWrapper';
+import { IOAUpdateWrapper } from '../../v4/model/interfaces/OAUpdateWrapper';
 import { Config } from '../../config/config';
-import { ISQSQueueUrlData } from 'v4/model/interfaces/SQSQueueUrlData';
+import { ISQSQueueUrlData } from '../../v4/model/interfaces/SQSQueueUrlData';
 const log = Logger.getLogger('SQSUtilsV4');
 
 // Create an SQS service object

@@ -1,6 +1,6 @@
 import * as AWS from 'aws-sdk';
-import * as uuidV4 from 'uuid/v4';
-import { ISQSQueueUrlData } from 'v4/model/interfaces/SQSQueueUrlData';
+import uuidV4 from 'uuid/v4';
+import { ISQSQueueUrlData } from '../../../v4/model/interfaces/SQSQueueUrlData';
 
 import Logger from '../../../utils/LoggerUtil';
 

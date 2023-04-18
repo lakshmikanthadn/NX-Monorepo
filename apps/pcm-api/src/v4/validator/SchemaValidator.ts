@@ -1,5 +1,5 @@
 import { OpenApiComponentV4 as schema } from '@tandfgroup/pcm-entity-model-v4';
-import * as Ajv from 'ajv';
+import Ajv from 'ajv';
 import * as _ from 'lodash';
 import { isEmail } from 'validator';
 

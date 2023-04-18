@@ -1,5 +1,4 @@
-import jwtDecode = require('jwt-decode');
-
+import jwtDecode from 'jwt-decode';
 import { get } from 'lodash';
 
 export interface tokenModel {

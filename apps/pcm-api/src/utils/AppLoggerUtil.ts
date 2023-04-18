@@ -1,6 +1,6 @@
 import * as rTracer from 'cls-rtracer';
 import { Request, Response } from 'express';
-import * as jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import * as _ from 'lodash';
 import * as log4js from 'log4js';
 import * as requestIp from 'request-ip';

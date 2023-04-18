@@ -1,6 +1,8 @@
 import * as _ from 'lodash';
 import * as Logger from 'log4js';
-import * as moment from 'moment';
+import * as importMoment from 'moment';
+
+const moment: any = importMoment;
 
 import { fullTextSearchOperators } from '../config/Config';
 import { CriteriaRule } from '../model/CriteriaRule';
@@ -150,7 +152,7 @@ function convertAttributeDataToRespectiveType(
       }
     case 'string':
       if (dateFormat === 'date-time') {
-        if (!moment(data, 'YYYY-MM-DDTHH:mm:ss.sssZ', true).isValid()) {
+        if (!(moment(data, 'YYYY-MM-DDTHH:mm:ss.sssZ', true).isValid())) {
           throw new Error('invalid value, a date value is expected');
         }
         return new Date(data);
