@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/pcm-search-api",
         "format": ["cjs"],
         "bundle": false,
-        "main": "apps/pcm-search-api/src/main.ts",
+        "main": "apps/pcm-search-api/src/server.ts",
         "tsConfig": "apps/pcm-search-api/tsconfig.app.json",
         "assets": ["apps/pcm-search-api/src/assets"],
         "generatePackageJson": true,

@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 import { isUUID } from 'validator';
 import Logger from '../../../utils/LoggerUtil';
 
-import { IAvailability } from 'v4/model/interfaces/SearchResult';
+import { IAvailability } from '../../../v4/model/interfaces/SearchResult';
 import { Config } from '../../../config/config';
 import { AppConstants } from '../../../config/constant';
 
