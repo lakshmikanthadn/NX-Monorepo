@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "dependsOn": ["^build"],
@@ -14,6 +14,7 @@
         "outputPath": "dist/apps/pcm-api",
         "format": ["cjs"],
         "bundle": false,
+        "commands": "tsc",
         "main": "apps/pcm-api/src/server.ts",
         "tsConfig": "apps/pcm-api/tsconfig.app.json",
         "assets": ["apps/pcm-api/src/assets"],

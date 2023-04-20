@@ -9,20 +9,10 @@
     "generate:appendAdditionalSchemaValidation": "node lib/appendAdditionalSchema.js"
   },
   "targets": {
-    "build": {
+    "tsbuild": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
-      "post-run": {
-        "executor": "@nrwl/esbuild:esbuild",
-        "options": {
-          "cwd": "./",
-          "commands": [
-            "npm run generate:openApiComponents"
-          ],
-          "parallel": false
-        }
-      },
       "options": {
         "outputPath":"dist/libs/pcm-entity-model-v4",
         "platform": "node",
@@ -34,6 +24,28 @@
         "generatePackageJson": true
 
       }
+    },
+    "build":{
+      "executor": "nx:run-commands",
+      "dependsOn": ["tsbuild"],
+      "options": {
+        "outputPath":"dist/libs/pcm-entity-model-v4",
+        "platform": "node",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "libs/pcm-entity-model-v4/src/index.ts",
+        "commands":[
+          {
+          "command": "typescript-json-schema libs/pcm-entity-model-v4/tsconfig.lib.json \"*\" --noExtraProps true --strictNullChecks false --id OpenApiSchema --required true --out \"dist/libs/pcm-entity-model-v4/lib/model/definitions/openApiComponents.json\""},
+          {
+            "command": "node dist/libs/pcm-entity-model-v4/src/appendAdditionalSchema.js"
+          }
+        ],
+        "tsConfig": "libs/pcm-entity-model-v4/tsconfig.lib.json",
+        "parallel": false,
+        "cwd": "./"
+      }
+
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

@@ -67,13 +67,17 @@
     "ts-node": "10.9.1",
     "tslint": "^5.17.0",
     "typescript": "^5.0.3",
-    "typescript-json-schema": "^0.38.3"
+    "typescript-json-schema": "^0.56.0"
   },
   "workspaces": [
     "apps/*",
     "libs/*"
   ],
   "dependencies": {
+    "@tandfgroup/pcm-content-proxy-api-handler": "file:libs/pcm-content-proxy-api-handler",
+    "@tandfgroup/pcm-entity-model-v4": "file:libs/pcm-entity-model-v4",
+    "@tandfgroup/pcm-rules-parser": "file:libs/pcm-rules-parser",
+    "@tandfgroup/pcm-schema-mapper-v4": "file:libs/pcm-schema-mapper-v4",
     "@elastic/elasticsearch": "7.13.0",
     "@tandfgroup/authorization-interceptor": "^2.2.1",
     "@tandfgroup/framework-utility-ubx-website": "^0.5.1",

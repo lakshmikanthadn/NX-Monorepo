@@ -4,7 +4,7 @@
   "sourceRoot": "libs/pcm-schema-mapper-v4/src",
   "projectType": "library",
   "targets": {
-    "build": {
+    "tsbuild": {
       "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
@@ -15,26 +15,33 @@
         "bundle": false,
         "main": "libs/pcm-schema-mapper-v4/src/index.ts",
         "tsConfig": "libs/pcm-schema-mapper-v4/tsconfig.lib.json",
-        "assets": ["apps/pcm-api/src/assets"],
-        "generatePackageJson": true,
+        "rootDir": "libs/pcm-schema-mapper-v4/src",
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {
             ".js": ".js"
           }
         }
-      },
-      "configurations": {
-        "development": {},
-        "production": {
-          "esbuildOptions": {
-            "sourcemap": false,
-            "outExtension": {
-              ".js": ".js"
-            }
-          }
-        }
       }
+    },
+    "build":{
+      "executor": "nx:run-commands",
+      "dependsOn": ["tsbuild"],
+      "options": {
+        "outputPath":"dist/libs/pcm-schema-mapper-v4",
+        "platform": "node",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "libs/pcm-schema-mapper-v4/src/index.ts",
+        "commands":[
+          {
+          "command": "node dist/libs/pcm-schema-mapper-v4/libs/pcm-schema-mapper-v4/src/generateSchemaMapper.js"}
+        ],
+        "tsConfig": "libs/pcm-schema-mapper-v4/tsconfig.lib.json",
+        "parallel": false,
+        "cwd": "./"
+      }
+
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

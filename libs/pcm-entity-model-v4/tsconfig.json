@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "files": [],
+  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts", "node_modules"],
   "include": ["src/**/*.ts" , "src/**/*.json"],
   "references": [
     {

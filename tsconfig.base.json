@@ -23,11 +23,13 @@
       "@tandfgroup/pcm-content-proxy-api-handler": [
         "libs/pcm-content-proxy-api-handler/src/index.ts"
       ],
-      "@tandfgroup/pcm-rules-parser": ["libs/pcm-rules-parser/src/index.ts"],
+      "@tandfgroup/pcm-rules-parser": 
+      ["libs/pcm-rules-parser/src/index.ts"],
       "@tandfgroup/pcm-schema-mapper-v4": [
         "libs/pcm-schema-mapper-v4/src/index.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "include": ["libs/pcm-entity-model-v4/src/model/definitions/openApiComponents.json"]
 }

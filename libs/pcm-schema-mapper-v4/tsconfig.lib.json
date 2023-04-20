@@ -5,8 +5,10 @@
     "outDir": "../../dist/out-tsc",
     "declaration": true,
     "types": ["node"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "composite": true
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "files": ["src/model/definitions/schemaMapper.json", "../pcm-entity-model-v4/src/model/definitions/openApiComponents.json"]
 }
